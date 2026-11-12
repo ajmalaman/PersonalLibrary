@@ -3,7 +3,7 @@
 An Android application built to manage, track, and search your personal book collection. 
 
 ## 📱 Screenshots
-| Home Screen | Book Details | Search |
+| Home Screen | Book edits | Adding books |
 | :---: | :---: | :---: |
 | <img src="https://github.com/user-attachments/assets/fa0e87a7-1b9c-46b1-9bb4-dbb010eb5727" width="250"/> | <img src="https://github.com/user-attachments/assets/166ac0e2-df0e-4bba-9249-a29fd5457f85" width="250"/> | <img src="https://github.com/user-attachments/assets/dd7b87b2-1fc2-401b-990a-d393ec99471c" width="250"/> |
 
