@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.PersonalLibrary" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/gold</item>
+        <item name="colorOnPrimary">@color/amoled_black</item>
+        <item name="colorPrimaryContainer">@color/gold_container</item>
+        <item name="colorOnPrimaryContainer">@color/gold_light</item>
+        <item name="colorSecondary">@color/gold_dim</item>
+        <item name="colorOnSecondary">@color/amoled_black</item>
+        <item name="colorSecondaryContainer">@color/gold_container</item>
+        <item name="colorOnSecondaryContainer">@color/gold_light</item>
+
+        <item name="android:colorBackground">@color/amoled_black</item>
+        <item name="colorOnBackground">@color/text_primary</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorSurfaceVariant">@color/card_bg</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        <item name="colorOutline">@color/outline_soft</item>
+        <item name="colorOutlineVariant">@color/card_stroke</item>
+    </style>
+
+    <!-- Fully rounded "pill" shape, used by the floating button -->
+    <style name="ShapeAppearance.App.Pill" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>

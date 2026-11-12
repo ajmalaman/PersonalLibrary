@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Personal Library</string>
+    <plurals name="book_count">
+        <item quantity="one">%d book</item>
+        <item quantity="other">%d books</item>
+    </plurals>
+    <string name="library_stats">%1$s · %2$d finished</string>
+    <string name="edit_book">Edit book</string>
+    <string name="quote_format">“%1$s”</string>
+
+    <string name="pages_progress">%1$d / %2$d pages · %3$d%%</string>
+    <string name="pages_error">Can’t be more than the total pages</string>
+    <string name="no_results">No books match your search.</string>
+    <string name="cover_hint_auto">Leave empty to find the cover online automatically.</string>
+    <string name="cover_hint_chosen">Cover selected ✓</string>
+    <string name="cover_error">Couldn’t load that image</string>
+    <string name="book_deleted">Deleted “%1$s”</string>
+    <string name="undo">Undo</string>
+
+    <string name="menu_more">More options</string>
+    <string name="export_library">Export library</string>
+    <string name="import_library">Import library</string>
+    <string name="export_empty">Add a book first, there’s nothing to export yet</string>
+    <string name="export_done">Backup saved</string>
+    <string name="export_error">Couldn’t save the backup</string>
+    <string name="import_done">Imported %1$d books, skipped %2$d already on your shelf</string>
+    <string name="import_error">That file isn’t a valid backup</string>
+</resources>

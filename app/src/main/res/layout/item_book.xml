@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardBook"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginBottom="16dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/card_bg"
+    app:cardCornerRadius="28dp"
+    app:cardElevation="0dp"
+    app:rippleColor="@color/gold_ripple"
+    app:strokeColor="@color/card_stroke"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Status "spine": the adapter colors this by reading status -->
+        <View
+            android:id="@+id/viewAccent"
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:background="@color/gold" />
+
+        <!-- Book cover (hidden by the adapter when no cover was found) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardCover"
+            android:layout_width="84dp"
+            android:layout_height="126dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="22dp"
+            app:cardBackgroundColor="@color/card_stroke"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/card_stroke"
+            app:strokeWidth="1dp">
+
+            <ImageView
+                android:id="@+id/ivCover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Book cover"
+                android:scaleType="centerCrop" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingTop="22dp"
+            android:paddingEnd="22dp"
+            android:paddingBottom="22dp">
+
+            <!-- Format tag + status -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvFormat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_pill"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="0.15"
+                    android:paddingStart="12dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="5dp"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="10sp"
+                    tools:text="Audiobook" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <View
+                    android:id="@+id/viewStatusDot"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_dot" />
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="0.04"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp"
+                    tools:text="Reading" />
+            </LinearLayout>
+
+            <!-- Title + author -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:ellipsize="end"
+                android:fontFamily="serif"
+                android:maxLines="2"
+                android:textColor="@color/text_primary"
+                android:textSize="24sp"
+                tools:text="The Name of the Wind" />
+
+            <TextView
+                android:id="@+id/tvAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.2"
+                android:maxLines="1"
+                android:textAllCaps="true"
+                android:textColor="@color/gold"
+                android:textSize="11sp"
+                tools:text="Patrick Rothfuss" />
+
+            <!-- Hairline + favorite quote (adapter hides both when there is no quote) -->
+            <View
+                android:id="@+id/viewQuoteDivider"
+                android:layout_width="28dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="18dp"
+                android:background="@color/gold_dim" />
+
+            <TextView
+                android:id="@+id/tvQuote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:ellipsize="end"
+                android:fontFamily="serif"
+                android:lineSpacingExtra="5dp"
+                android:maxLines="4"
+                android:textColor="@color/text_secondary"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                tools:text="“My God, a whole moment of happiness! Is that too little for the whole of a man’s life?”" />
+
+            <!-- Rating -->
+            <TextView
+                android:id="@+id/tvRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:letterSpacing="0.2"
+                android:textColor="@color/gold"
+                android:textSize="15sp"
+                tools:text="★★★★☆" />
+
+            <!-- Reading progress (adapter shows this only for Reading books with a page count) -->
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progressReading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:indicatorColor="@color/gold"
+                app:trackColor="@color/card_stroke"
+                app:trackCornerRadius="3dp"
+                app:trackThickness="5dp"
+                tools:progress="44" />
+
+            <TextView
+                android:id="@+id/tvProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:letterSpacing="0.04"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                tools:text="142 / 320 pages · 44%" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
